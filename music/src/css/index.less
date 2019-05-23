@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    body {
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        font-size: 12px;
+
+        .wrapper {
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            padding: 60px;
+            background-color: rgba(0, 0, 0, 0.2);
+
+            .song-img {
+                position: relative;
+                width: 70%;
+                height: 0px;
+                padding-top: 70%;
+                margin: 0 auto;
+
+                .song-box {
+                    position: absolute;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    top: 0px;
+                    background-color: #000;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 75%;
+                        height: 75%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .song-info {
+                width: 100%;
+                height: 100px;
+                padding-top: 100px;
+                text-align: center;
+                border: 1px solid black;
+                margin: 0 auto;
+                color: #fff;
+
+                .song-name {
+                    font-size: 24px;
+                    line-height: 36px;
+                    margin-bottom: 8px;
+                }
+            }
+
+            .timer {
+                display: flex;
+
+                .first-time,
+                .last-time {
+                    width: 60px;
+                    height: 40px;
+                    color: #fff;
+                    border: 1px solid red;
+                    text-align: center;
+                    line-height: 40px;
+                }
+
+                .pro-wrap {
+                    flex: 1;
+                    border: 1px solid red;
+                    position: relative;
+                    overflow: hidden;
+
+                    .pro-top,
+                    .pro-bottom {
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        top: 50%;
+                        margin-top: -1px;
+                    }
+
+                    .pro-top {
+                        position: relative;
+                        background-color: #fff;
+                        transform: translateX(-100%);
+                        display: flex;
+                        justify-items: center;
+                        align-items: center;
+
+                    }
+
+                    .spot {
+                        width: 20px;
+                        height: 20px;
+                        right: -12px;
+                        position: absolute;
+                        display: flex;
+                        justify-items: center;
+                        align-items: center;
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 4px;
+                            height: 4px;
+                            border-radius: 50%;
+                            background-color: #fff;
+                            border: 1px solid red;
+                        }
+                    }
+
+                    .pro-bottom {
+                        background-color: rgba(255, 255, 255, 0.6);
+                    }
+                }
+
+            }
+
+            .footer {
+                width: 100%;
+                height: 40px;
+                border: 1px solid red;
+                background-color: rgba(0, 0, 0, 0.6);
+                display: flex;
+
+                .btn {
+                    flex: 1;
+                    height: 100%;
+                    border: 1px solid #000;
+                    background-repeat: no-repeat;
+                    background-size: 15px;
+                    background-position: center;
+                }
+
+                .islike {
+                    background-image: url('../images/icon-like.png');
+
+                    &.isliking {
+                        background-image: url('../images/icon-like-solid.png');
+                    }
+                }
+
+                .prev {
+                    background-image: url('../images/icon-prev.png');
+                }
+
+                .play {
+                    background-image: url('../images/icon-play.png');
+
+                    &.playing {
+                        background-image: url('../images/icon-pause.png');
+                    }
+                }
+
+                .next {
+                    background-image: url('../images/icon-next.png')
+                }
+
+                .list {
+                    background-image: url('../images/icon-list.png')
+                }
+            }
+        }
+
+    }
+}
